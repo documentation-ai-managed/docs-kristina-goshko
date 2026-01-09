@@ -1,0 +1,133 @@
+---
+title: Core Features
+description: Explore the essential tools for managing and organizing project documentation effectively. Learn about capabilities that streamline your workflow.
+---
+
+## Overview
+
+Kristina Goshko provides powerful tools to create, organize, search, and version-control your project documentation. You streamline your workflow by leveraging these core features, which support collaborative editing and efficient knowledge management.
+
+<Columns cols={3}>
+  <Card title="Document Creation" icon="edit-3" href="#document-creation">
+    Create and edit rich Markdown documents with real-time previews.
+  </Card>
+  <Card title="Project Organization" icon="folder" href="#project-organization">
+    Structure your docs using folders, tags, and custom hierarchies.
+  </Card>
+  <Card title="Search" icon="search" href="#search">
+    Find content instantly across your entire documentation space.
+  </Card>
+</Columns>
+
+<Callout kind="info">
+  These features integrate seamlessly, allowing you to build a scalable documentation hub.
+</Callout>
+
+## Document Creation and Editing
+
+You create new documents directly from the dashboard or via keyboard shortcuts. The editor supports full MDX syntax, including components like `<Callout>` and code blocks.
+
+<Steps>
+  <Step title="Create a New Document" icon="plus">
+    Click the `+ New Document` button or use <kbd>Cmd</kbd>+<kbd>N</kbd>.
+  </Step>
+  <Step title="Edit Content">
+    Write in the split-pane editor. Preview changes live on the right.
+  </Step>
+  <Step title="Add Components">
+    Insert JSX components via the toolbar. For example, add a `<CodeGroup>` for multi-language examples.
+  </Step>
+  <Step title="Publish">
+    Save and publish with one click. Changes go live instantly.
+  </Step>
+</Steps>
+
+```markdown
+# My First Doc
+
+## Hello World
+
+This is your starting point.
+```
+
+## Project Organization
+
+Organize your documentation using intuitive structures. Choose folders for hierarchical navigation or tags for flexible categorization.
+
+<Tabs>
+  <Tab title="Folders" icon="folder">
+    Create nested folders to mirror your project structure.
+
+    ```
+    docs/
+    ├── introduction.mdx
+    ├── api/
+    │   └── endpoints.mdx
+    └── guides/
+        └── quickstart.mdx
+    ```
+
+    <Callout kind="tip">
+      Drag and drop files to reorganize effortlessly.
+    </Callout>
+  </Tab>
+  <Tab title="Tags" icon="tag">
+    Assign tags like `feature`, `bugfix`, or `api` for cross-project filtering.
+
+    Use the tag panel to view all docs tagged `v1.0`.
+  </Tab>
+</Tabs>
+
+## Search Functionality
+
+Search across all documents with advanced filters. You query titles, content, tags, or even code snippets.
+
+| Feature          | Description                          | Example Query             |
+|------------------|--------------------------------------|---------------------------|
+| Full-Text Search | Matches words in titles and body     | `authentication flow`     |
+| Tag Filter       | Limits results to specific tags      | `tag:api`                 |
+| Regex Support    | Advanced pattern matching            | `error.*handler`          |
+| Code Search      | Finds code blocks and snippets       | `fetch.*api.example.com`  |
+
+<Expandable title="Advanced Search Tips" default-open="false">
+  Combine filters: `project:api AND status:draft`. Exclude with `-tag:deprecated`.
+</Expandable>
+
+## Version Control Basics
+
+Track changes with built-in Git integration. You commit, branch, and revert documents like code.
+
+<CodeGroup tabs="Git CLI,UI">
+  ```bash
+  # Stage and commit changes
+  git add docs/features.mdx
+  git commit -m "Add search functionality docs"
+  git push origin main
+  ```
+  ```bash
+  # Create a branch for new features
+  git checkout -b feature/search-ui
+  ```
+</CodeGroup>
+
+```bash
+# Revert to previous version
+git checkout HEAD~1 -- docs/introduction.mdx
+```
+
+<Callout kind="tip" kind="success">
+  Enable auto-commits in settings for seamless version history.
+</Callout>
+
+## Next Steps
+
+Master these features to supercharge your documentation workflow.
+
+<Columns cols={2}>
+  <Card title="Advanced Editing" icon="code" href="/advanced-editing">
+    Dive into custom components and themes.
+  </Card>
+  <Card title="Collaboration" icon="users" href="/collaboration">
+    Invite team members and manage permissions.
+  </Card>
+</Columns>

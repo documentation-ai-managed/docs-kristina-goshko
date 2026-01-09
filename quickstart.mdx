@@ -1,0 +1,132 @@
+---
+title: Getting Started
+description: Set up your documentation space and create your first project quickly. Follow these steps to begin organizing your documentation.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- A modern web browser like Chrome or Firefox
+- An email address for account verification
+- Optional: GitHub account for version control integration
+
+<Callout kind="info">
+
+Prepare your project details, such as the space name and initial documents. This setup takes under 5 minutes.
+
+</Callout>
+
+## Account Setup and Space Creation
+
+Follow these steps to create your Kristina Goshko documentation space.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+
+    Visit `https://kristinagoshko.com` and click **Sign Up**.
+
+    Fill in your email, create a password, and verify your account via email.
+
+  </Step>
+  <Step title="Create New Space" icon="plus">
+
+    After login, select **New Space** from the dashboard.
+
+    Enter a name like `My Project Docs`, choose a brand color such as `#3B82F6`, and select **Create**.
+
+  </Step>
+  <Step title="Add First Document" icon="file-text">
+
+    In your new space, click **New Document**.
+
+    Name it `introduction.mdx` and start editing with the built-in MDX editor.
+
+    <CodeGroup tabs="MDX,Markdown">
+      ````mdx
+      ---
+      title: Introduction
+      description: Welcome to my docs.
+      ---
+
+      ## Overview
+
+      This is your first document.
+      ````
+
+      ```markdown
+      # Introduction
+
+      Welcome to my documentation space.
+      ```
+    </CodeGroup>
+
+  </Step>
+  <Step title="Publish and Share" icon="globe">
+
+    Click **Publish** to make your space live.
+
+    Copy the shareable URL, such as `https://kristinagoshko.com/spaces/my-project-docs`.
+
+  </Step>
+</Steps>
+
+## Basic Interface Tour
+
+Explore the key areas of the Kristina Goshko interface using this overview.
+
+<Columns cols={3}>
+  <Card title="Editor Panel" icon="edit-3" href="#editor">
+    Write MDX content with live preview and syntax highlighting.
+  </Card>
+  <Card title="Sidebar Navigation" icon="menu" href="#sidebar">
+    Manage spaces, documents, and settings in one place.
+  </Card>
+  <Card title="Preview Pane" icon="eye" href="#preview">
+    See real-time rendering of your documentation.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced Editor Features" default-open="false">
+
+  Use components like `<Callout>` or `<Steps>` directly in the editor.
+
+  ```jsx
+  <Callout kind="tip">
+    Experiment with components for richer docs.
+  </Callout>
+  ```
+
+</Expandable>
+
+## Next Steps
+
+<Callout kind="tip">
+
+  Customize your space further by integrating GitHub for version control or adding custom domains.
+
+</Callout>
+
+Dive deeper with these resources:
+
+<Columns cols={2}>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your spaces with API keys and roles.
+  </Card>
+  <Card title="Advanced MDX Components" icon="code" href="/introduction">
+    Master components for professional docs.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="Desktop" icon="monitor">
+
+    Use keyboard shortcuts: <kbd>Ctrl</kbd>+<kbd>S</kbd> to save, <kbd>Ctrl</kbd>+<kbd>P</kbd> for preview.
+
+  </Tab>
+  <Tab title="Mobile" icon="smartphone">
+
+    Tap the menu icon for navigation. Pinch to zoom in the editor.
+
+  </Tab>
+</Tabs>

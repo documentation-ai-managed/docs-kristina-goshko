@@ -1,0 +1,152 @@
+---
+title: Customizing Your Documentation Space
+description: Tailor the platform to fit your branding and workflow needs. Configure settings for a personalized documentation experience.
+---
+
+## Overview
+
+Customize Kristina Goshko's documentation space to match your brand and optimize your workflow. Adjust themes, manage permissions, tweak layouts, and integrate external tools. Start with simple settings in your dashboard and advance to custom configurations.
+
+<Callout kind="info">
+  Access customization settings from your dashboard at `https://dashboard.example.com/settings`.
+</Callout>
+
+## Theme and Color Customization
+
+Apply your brand colors and themes directly in the settings panel.
+
+<Columns cols={2}>
+  <Card title="Primary Color" icon="palette" href="#primary-color">
+    Set your main brand color, like `#3B82F6`.
+  </Card>
+  <Card title="Dark Mode" icon="moon" href="#dark-mode">
+    Enable automatic dark mode switching.
+  </Card>
+</Columns>
+
+### Primary Color Configuration
+
+Update your primary color using the config file.
+
+<CodeGroup tabs="JSON,YAML">
+  ```json
+  {
+    "theme": {
+      "primaryColor": "#3B82F6"
+    }
+  }
+  ```
+  ```yaml
+  theme:
+    primaryColor: "#3B82F6"
+  ```
+</CodeGroup>
+
+<ParamField path="theme.primaryColor" param-type="string" required="true">
+  Hex color code for buttons, links, and accents. Defaults to `#3B82F6`.
+</ParamField>
+
+## Permission Management
+
+Control who accesses your documentation space.
+
+<Tabs>
+  <Tab title="Admin" icon="shield">
+    Admins manage all settings and users.
+
+    <ParamField query="role" param-type="string" required="true">
+      Set to `admin` for full access.
+    </ParamField>
+  </Tab>
+  <Tab title="Editor" icon="edit-3">
+    Editors create and update pages.
+
+    ```javascript
+    const permissions = {
+      role: 'editor',
+      actions: ['create', 'update']
+    };
+    ```
+  </Tab>
+  <Tab title="Viewer" icon="eye">
+    Viewers read content only.
+
+    <Callout kind="tip">
+      Use viewer roles for public documentation.
+    </Callout>
+  </Tab>
+</Tabs>
+
+## Layout Adjustments
+
+Modify sidebar, headers, and page widths.
+
+<Steps>
+  <Step title="Open Layout Settings" icon="settings">
+    Navigate to `https://dashboard.example.com/settings/layout`.
+  </Step>
+  <Step title="Adjust Sidebar" icon="sidebar">
+    Toggle fixed or collapsible sidebar.
+
+    ```json
+    {
+      "layout": {
+        "sidebar": "collapsible"
+      }
+    }
+    ```
+  </Step>
+  <Step title="Set Page Width" icon="maximize-2">
+    Choose narrow, standard, or wide layouts.
+  </Step>
+</Steps>
+
+<ParamField body="layout.maxWidth" param-type="string" required="false">
+  Options: `narrow`, `standard`, `wide`. Default is `standard`.
+</ParamField>
+
+## Integration with External Tools
+
+Connect Kristina Goshko to GitHub, Slack, or custom webhooks.
+
+<Expandable title="GitHub Integration" default-open="true">
+  Sync your repository automatically.
+
+  <CodeGroup tabs="cURL,JavaScript">
+    ```bash
+    curl -X POST https://api.example.com/integrations/github \
+      -H "Authorization: Bearer YOUR_TOKEN" \
+      -d '{"repo": "your-org/kristina-docs"}'
+    ```
+    ```javascript
+    await fetch('https://api.example.com/integrations/github', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer YOUR_TOKEN' },
+      body: JSON.stringify({ repo: 'your-org/kristina-docs' })
+    });
+    ```
+  </CodeGroup>
+</Expandable>
+
+<Expandable title="Webhook Setup">
+  Receive notifications on events.
+
+  <ParamField header="Webhook-URL" param-type="string" required="true">
+    Your endpoint like `https://your-webhook-url.com/webhook`.
+  </ParamField>
+</Expandable>
+
+## Best Practices and Troubleshooting
+
+- Test changes in preview mode before publishing.
+- Backup your config file regularly.
+
+| Issue | Solution |
+|-------|----------|
+| Color not applying | Clear browser cache and restart. |
+| Permissions denied | Check user roles in dashboard. |
+| Integration failing | Verify `YOUR_TOKEN` and network access. |
+
+<Callout kind="alert">
+  Avoid using unescaped special characters like `{config}` or `<100ms` in custom CSS to prevent parsing errors.
+</Callout>

@@ -1,0 +1,113 @@
+---
+title: Introduction to Kristina Goshko Documentation
+description: Welcome to your default documentation space for organizing and managing project documentation. Discover the overview, key features, and how to get started.
+---
+
+## Overview
+
+Kristina Goshko provides a centralized documentation space where you can organize, manage, and collaborate on all your project documentation. Create structured guides, embed code examples, and maintain version history effortlessly. This default space serves as your hub for technical docs, API references, and onboarding materials.
+
+## Key Features
+
+Kristina Goshko offers powerful tools to streamline your documentation workflow. Explore the core capabilities below.
+
+<Columns cols={3}>
+  <Card title="Organized Spaces" icon="folder" href="/guides/organization">
+    Group docs into spaces by project, team, or topic. Use folders and tags for easy discovery.
+  </Card>
+  <Card title="Rich Components" icon="components" href="/guides/components">
+    Embed interactive elements like tabs, steps, and code groups directly in your MDX pages.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/changelog">
+    Track changes with built-in versioning and changelog entries.
+  </Card>
+  <Card title="Search & Navigation" icon="search" href="/guides/navigation">
+    Full-text search and intuitive sidebar navigation keep you oriented.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get up and running in minutes. Follow these steps to create your first documentation page.
+
+<Steps>
+  <Step title="Create a New Page" icon="plus">
+    Navigate to your space dashboard and click `New Page`. Choose the `introduction.mdx` template.
+  </Step>
+  <Step title="Add Content" icon="edit-3">
+    Use the MDX editor to write your overview. Add headings, lists, and components like `<Callout>` for emphasis.
+
+````mdx
+## Welcome
+
+Start writing here.
+````
+  </Step>
+  <Step title="Publish and Share" icon="share-2">
+    Preview your page, then publish. Share the public URL: `https://docs.example.com/introduction`.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Customize your brand color to `#3B82F6` in space settings for a professional look.
+</Callout>
+
+## Navigation Guide
+
+Efficient navigation ensures you find what you need quickly. Use these patterns:
+
+<Tabs>
+  <Tab title="Sidebar" icon="menu">
+    Access pages via the left sidebar. Pin frequently used docs at the top.
+  </Tab>
+  <Tab title="Search" icon="search">
+    Type queries like "API authentication" to surface relevant pages instantly.
+  </Tab>
+  <Tab title="Breadcrumbs" icon="chevrons-right">
+    Track your location with breadcrumbs: Home > Spaces > Your Project.
+  </Tab>
+</Tabs>
+
+## Use Cases
+
+Tailor Kristina Goshko to your projects:
+
+<CodeGroup tabs="API Docs,Onboarding,Tutorials">
+```mdx
+## API Endpoint
+
+<ParamField path="users" param-type="string" required="true">
+  User ID.
+</ParamField>
+```
+```mdx
+## Team Onboarding
+
+<Steps>
+  <Step title="Step 1">Review guidelines.</Step>
+</Steps>
+```
+```mdx
+## Interactive Tutorial
+
+<Tabs>
+  <Tab title="JavaScript">Code here.</Tab>
+</Tabs>
+```
+</CodeGroup>
+
+## Next Steps
+
+Dive deeper with these resources:
+
+<Card title="Quickstart Guide" icon="zap" href="/quickstart">
+  Build your first full guide.
+</Card>
+
+<Card title="Authentication" icon="shield" href="/authentication">
+  Secure your docs.
+</Card>
+
+<Card title="Advanced Components" icon="settings" href="/guides/components">
+  Master rich embeds.
+</Card>

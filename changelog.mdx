@@ -1,0 +1,143 @@
+---
+title: Changelog
+description: Review the version history of the documentation platform. Stay updated on new features, improvements, and fixes.
+---
+
+## Recent Updates
+
+Kristina Goshko's documentation platform evolves continuously. You receive automatic updates with new features, performance improvements, and bug fixes. Review the highlights below to understand changes and plan migrations.
+
+<Callout kind="info">
+  Bookmark this page and check it after each release. Major versions may include breaking changes.
+</Callout>
+
+<Columns cols={3}>
+  <Card title="New Features" icon="sparkles" href="#v1-2-0">
+    Discover the latest capabilities added to enhance your workflow.
+  </Card>
+  <Card title="Bug Fixes" icon="bug" href="#v1-1-0">
+    Resolutions for reported issues to ensure stability.
+  </Card>
+  <Card title="Migration Guide" icon="code" href="#migration">
+    Steps to upgrade your project safely.
+  </Card>
+</Columns>
+
+## v1.2.0 - 2024-10-15
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added real-time collaboration for shared documentation spaces
+- Introduced custom brand colors (default: `#3B82F6`) for personalized themes
+- Enabled export to PDF and Markdown formats directly from the editor
+
+## Improvements
+
+- Enhanced search with fuzzy matching and syntax highlighting
+- Optimized loading times by `>40%` for large documentation sites
+
+## Bug Fixes
+
+- Fixed rendering issues with nested code blocks
+- Resolved authentication token refresh failures during long sessions
+
+</Update>
+
+## v1.1.0 - 2024-09-20
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Integrated version control with GitHub sync
+- Added component preview mode for MDX elements like `<Callout>` and `<Steps>`
+
+## Improvements
+
+- Streamlined sidebar navigation with drag-and-drop reordering
+- Better mobile responsiveness for documentation previews
+
+## Deprecations
+
+- Legacy `{api_key}` format deprecated; migrate to `API_KEY`
+
+</Update>
+
+## v1.0.0 - 2024-08-10
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## New Features
+
+- Core MDX documentation engine with 15+ components
+- Full-text search across all pages
+- YAML frontmatter validation on save
+
+## Breaking Changes
+
+- Updated default theme; custom CSS now required for overrides
+
+## Initial Setup
+
+- Basic authentication via `https://auth.example.com`
+- API base: `https://api.example.com/v1`
+
+</Update>
+
+## Migration Steps
+
+Follow these steps to update your project after each release.
+
+<Steps>
+  <Step title="Check Compatibility" icon="check-circle">
+
+    Review the tags in each `<Update>`:
+
+    - `breaking`: Test thoroughly
+    - `feature`: Enable new flags
+    - `bugfix`: Deploy immediately
+
+  </Step>
+  <Step title="Update Package" icon="download">
+
+    <CodeGroup tabs="npm,yarn">
+    ````bash
+    npm install kristina-goshko-docs@latest
+    ````
+    ````bash
+    yarn add kristina-goshko-docs@latest
+    ````
+    </CodeGroup>
+
+  </Step>
+  <Step title="Run Migrations" icon="settings">
+
+    Execute any required scripts:
+
+    ````bash
+    npx goshko-migrate v1.2.0
+    ````
+
+  </Step>
+  <Step title="Test Deployment" icon="rocket">
+
+    Preview at `https://dashboard.example.com` and verify components render correctly.
+
+  </Step>
+</Steps>
+
+## Stay Informed
+
+<Expandable title="Full Release History" default-open="false">
+
+  Access older versions via the [GitHub repository](https://github.com/example/kristina-goshko-docs/releases).
+
+  Subscribe to RSS: `/changelog.xml`
+
+</Expandable>
+
+<Callout kind="tip">
+  Contribute changes via pull requests. Tag releases with `feature`, `bugfix`, or `breaking`.
+</Callout>
